@@ -60,7 +60,7 @@ public class Statsig {
 
         var result = false
         errorBoundary.capture {
-            result = client.checkGate(gateName)
+            result = client.checkGate(gateName.lowercased())
         }
         return result
     }
